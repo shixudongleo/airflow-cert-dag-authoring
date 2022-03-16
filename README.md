@@ -1,14 +1,22 @@
-# Astronomer DAG Authoring for Apache Airflow Course
+# Astronomer Cloud CLI
 
-## Course notes
-1. [The basics](notes/1_the_basics.md)
-1. [Variables](notes/2_variables.md)
-1. [TaskFlow Api](notes/3_taskflow_api.md)
-1. [Advanced concepts](notes/4_advanced_concepts.md)
-1. [DAG dependencies](notes/5_dag_dependencies.md)
+The Astronomer Cloud CLI can be used to build Airflow DAGs locally and run them via docker-compose, as well as to deploy those DAGs to Astronomer-managed Airflow clusters and interact with the Astronomer API in general.
 
+## Local Development
 
-( Passed the [exam](https://www.credly.com/badges/7fade49e-55d8-4ee5-8a26-f91a3c8e2648), yey 😄 )
+1. Install `go` 1.7+ - https://go.dev/doc/install
+2. Install `golangci-lint` to run linter locally
 
-## Try it
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/ovimihai/airflow-cert-dag-authoring)
+    ```brew install golangci-lint```
+
+    ```golangci-lint run .```
+3. Install `pre-commit` to run lint on every commit
+    
+    ```brew install pre-commit```
+
+    ```pre-commit install```
+    
+    Run lint locally:
+
+    ```pre-commit run --all-files```
+
