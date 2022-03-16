@@ -2,3 +2,9 @@ tasks:
   - before: brew install astronomer/tap/astro
     init: echo 'y' | astro dev init
     command: astro dev start
+
+
+ports:
+  - port: 8080
+    onOpen: open-preview
+    visibility: private
