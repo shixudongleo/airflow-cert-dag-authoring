@@ -1,11 +1,24 @@
+vscode:
+  extensions:
+    - ms-python.python
+    - DavidAnson.vscode-markdownlint
+    - EditorConfig.EditorConfig
+
 tasks:
-  - init: |
+  - name: Setup Astro CLI
+    init: |
       curl https://goreleaserdev.blob.core.windows.net/goreleaser-test-container/releases/v1.3.0/cloud-cli_1.3.0_Linux_x86_64.tar.gz -o astrocloudcli.tar.gz
       tar xzf astrocloudcli.tar.gz && rm astrocloudcli.tar.gz
       sudo mv astrocloud /usr/local/bin/astro
       echo 'y' | astro dev init
     command: astro dev start
 
+  - name: Setup Pyenv
+    command: |
+      pyenv virtualenv airflow_env
+      pyenv activate airflow_env
+      pip install -r requirements.txt
+      pip install "apache-airflow[amazon]==2.2.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.2.2/constraints-3.8.txt"
 
 ports:
   - port: 8080

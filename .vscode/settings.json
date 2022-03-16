@@ -1,0 +1,25 @@
+{
+    "python.defaultInterpreterPath": "/home/gitpod/.pyenv/versions/airflow_env/bin/python",
+    "python.envFile": "${workspaceFolder}/.env",
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/plugins"
+    },
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "/home/gitpod/.pyenv/versions/airflow_env/bin/flake8",
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "/home/gitpod/.pyenv/versions/airflow_env/bin/black",
+    "python.linting.mypyEnabled": false,
+    "python.linting.mypyPath": "/home/gitpod/.pyenv/versions/airflow_env/bin/mypy",
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "[markdown]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.markdownlint": true
+        }
+    }
+}
