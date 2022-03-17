@@ -18,7 +18,7 @@ tasks:
       pyenv virtualenv airflow_env
       pyenv activate airflow_env
       pip install -r requirements.txt
-      pip install "apache-airflow[amazon]==2.2.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.2.2/constraints-3.8.txt"
+      pip install "apache-airflow==2.2.2" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.2.2/constraints-3.8.txt"
 
 ports:
   - port: 8080
